@@ -87,7 +87,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </table>
                         <p>
                             <?= Html::a('แก้ไขครุภัณฑ์', ['update', 'id' => $model->asset_detail_id], ['class' => 'btn btn-primary']) ?>
-                            <?= Html::a('พิมพ์ QR Code', ['../eoffice_asset/barcode/', 'asset_detail_id' => $model->asset_detail_id], ['class' => 'btn btn-primary']) ?>
+                            <?= Html::a('สร้าง QR Code', ['../eoffice_asset/barcode/', 'asset_detail_id' => $model->asset_detail_id], ['class' => 'btn btn-primary']) ?>
                             <?= Html::a('ลบรายการ', ['delete', 'id' => $model->asset_detail_id], [
                                 'class' => 'btn btn-danger',
                                 'data' => [
