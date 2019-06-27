@@ -1,0 +1,62 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+
+
+/* @var $this yii\web\View */
+/* @var $model app\modules\eoffice_form\models\DesignSection */
+
+$this->title = 'เพิ่มหมวดหมู่';
+$this->params['breadcrumbs'][] = ['label' => 'แบบฟอร์มคำร้อง', 'url' => ['req-template/index']];
+$this->params['breadcrumbs'][] = ['label' => 'Template', 'url' => ['req-template/view','id' => $template_id]];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="design-section-form">
+
+    <div id="content" class="dashboard">
+        <div id="panel-1" class="panel panel-primary">
+            <div class="panel-heading">
+                  <span class="title elipsis">
+                    <strong>เพิ่มหมวดหมู่</strong>
+                  </span>
+            </div>
+            <div class="panel-body">
+                <div class="req-template-form">
+
+                    <?php $form = ActiveForm::begin(); ?>
+
+                    <?= $form->field($model, 'design_section_name')->textInput(['maxlength' => true]) ?>
+
+                    <?php
+                    $SectionDesignType = app\modules\eoffice_form\models\DesignSectionType::find()->all();
+                    $listData=ArrayHelper::map($SectionDesignType,'section_type_id','section_type_name');
+                    ?>
+
+                    <?= $form->field($model, 'section_type_id')->dropDownList($listData
+                        ,['options' => ['4' =>  ['Selected'=>true]]],
+                        ['prompt'=>'-- เลือกประเภท --']) ?>
+
+
+
+                    <?= $form->field($model, 'design_section_order')->textInput(['type' => 'number']) ?>
+
+
+
+                    <?= $form->field($model, 'template_id')->hiddenInput(['value' => $template_id,'readonly'=>'true'])->label(false) ?>
+
+
+
+                    <div class="form-group">
+                        <?= Html::submitButton(' บันทึก', ['class' => 'btn btn-success fa fa-check']) ?>
+                    </div>
+
+                    <?php ActiveForm::end(); ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

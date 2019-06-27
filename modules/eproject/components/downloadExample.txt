@@ -1,0 +1,6 @@
+<?php
+use kartik\export\ExportMenu;
+echo ExportMenu::widget([
+    'dataProvider' => $provider,
+    'showColumnSelector'=>false
+]);?>

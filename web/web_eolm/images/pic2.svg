@@ -1,0 +1,31 @@
+<svg width="1024" height="768" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="770" width="1026" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_3" y="72.001121" x="465.999304" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">เริ่มต้น</text>
+  <rect id="svg_11" height="64.000997" width="322.671693" y="140.002182" x="329.997185" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_5" y="181.336162" x="375.331223" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">กดทำแบบอนุมัติเบิกจ่าย</text>
+  <rect stroke="#000" id="svg_12" height="64.000997" width="518.674776" y="358.672262" x="241.995806" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_6" y="398.672883" x="252.662645" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">กรอกข้อมูลในแบบอนุมัติเบิกจ่าย/แนบเอกสาร(ถ้ามี)</text>
+  <rect stroke="#000" id="svg_13" height="64.000997" width="148.00231" y="466.673937" x="424.665324" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_7" y="510.674618" x="452.66577" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">กดบันทึก</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_16" y="620.009662" x="436.665515" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">จบการทำงาน</text>
+  <path id="svg_25" d="m434.815581,32.129429l124.798232,0l0,0c16.348923,0 29.602313,14.028635 29.602313,31.333825c0,17.305183 -13.253395,31.333812 -29.602313,31.333812l-124.798232,0l0,0c-16.348905,0 -29.602313,-14.028629 -29.602313,-31.333812c0,-17.305196 13.253408,-31.333825 29.602313,-31.333825z" stroke-opacity="null" stroke-width="3" stroke="#000" fill="none"/>
+  <path id="svg_26" d="m441.482335,580.137931l124.79824,0l0,0c16.34892,0 29.60231,14.02864 29.60231,31.33382c0,17.30519 -13.2534,31.33382 -29.60231,31.33382l-124.79824,0l0,0c-16.3489,0 -29.60231,-14.02863 -29.60231,-31.33382c0,-17.30519 13.25341,-31.33382 29.60231,-31.33382z" fill-opacity="null" stroke-opacity="null" stroke-width="3" stroke="#000" fill="none"/>
+  <path transform="rotate(179.8323211669922 495.5372619628906,116.67002868652344) " id="svg_27" d="m487.537153,116.61563l8.000113,-22.612612l8.000113,22.612612l-4.000057,0l0,22.72142l-8.000112,0l0,-22.72142l-4.000057,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <path transform="rotate(179.8323211669922 498.2039794921875,226.0050506591797) " id="svg_28" d="m490.203866,225.950665l8.00011,-22.61261l8.00011,22.61261l-4.00006,0l0,22.72142l-8.00011,0l0,-22.72142l-4.00005,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <path transform="rotate(179.8323211669922 500.87066650390625,444.67517089843756) " id="svg_29" d="m492.870574,444.62074l8.00011,-22.61261l8.00011,22.61261l-4.00006,0l0,22.72142l-8.00011,0l0,-22.72142l-4.00005,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <path transform="rotate(179.8323211669922 500.87066650390625,554.0101928710938) " id="svg_30" d="m492.870585,553.955764l8.00011,-22.61261l8.00011,22.61261l-4.00006,0l0,22.72142l-8.00011,0l0,-22.72142l-4.00005,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <rect stroke="#000" id="svg_35" height="64.000997" width="412.006441" y="249.337217" x="295.329965" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_36" y="286.67113" x="349.997496" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">กรอกข้อมูลรายละเอียดรายจ่าย</text>
+  <path transform="rotate(179.8323211669922 500.8706970214844,335.3401184082031) " id="svg_37" d="m492.870574,335.285695l8.00011,-22.61261l8.00011,22.61261l-4.00006,0l0,22.72142l-8.00011,0l0,-22.72142l-4.00005,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+ </g>
+</svg>

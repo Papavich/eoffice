@@ -1,0 +1,101 @@
+{
+    "name": "yiisoft/yii2-app-basic",
+    "description": "Yii 2 Basic Project Template",
+    "keywords": ["yii2", "framework", "basic", "project template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.14",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "yii2mod/yii2-star-rating": "*",
+        "dektrium/yii2-user": "^0.9.12",
+        "dektrium/yii2-rbac": "1.0.0-alpha@dev",
+        "yiidoc/yii2-timeago": "dev-master",
+        "mdmsoftcskku/yii2-admin": "3.3",
+        "lavrentiev/yii2-toastr": "^2.0",
+        "kartik-v/yii2-widget-select2": "@dev",
+        "kartik-v/yii2-widget-datepicker": "@dev",
+        "dixonsatit/yii2-thai-year-formatter": "*",
+        "yiisoft/yii2-httpclient": "~2.0.0",
+        "kartik-v/yii2-widgets": "*",
+        "yurkinx/yii2-image": "dev-master",
+        "2amigos/yii2-date-picker-widget" : "~1.0",
+        "2amigos/yii2-gallery-widget" : "*",
+        "2amigos/yii2-file-upload-widget": "~1.0",
+        "yiisoft/yii2-elasticsearch": "~2.1.0@dev",
+        "phpoffice/phpexcel": "^1.8",
+        "mpdf/mpdf": "*",
+        "cornernote/yii2-linkall": "*",
+        "et-soft/yii2-widget-select-year": "1.0.0",
+        "wbraganca/yii2-dynamicform": "dev-master",
+        "yiisoft/yii2-jui": "^2.0",
+        "kartik-v/yii2-grid": "@dev",
+        "kartik-v/yii2-export": "*",
+        "kartik-v/yii2-mpdf": "*",
+        "2amigos/yii2-qrcode-helper": "^1.0",
+        "phpoffice/phpspreadsheet": "^1.1",
+        "2amigos/yii2-ckeditor-widget" : "~2.1",
+        "yii2mod/yii2-sweet-alert": "^1.3",
+        "kartik-v/yii2-date-range": "*",
+        "phpoffice/phpword": "^0.14.0",
+        "philippfrenzel/yii2fullcalendar":"*",
+        "yiisoft/yii2-imagine": "^2.1",
+        "bedezign/yii2-audit": "^1.0",
+
+        "kartik-v/bootstrap-fileinput": "@dev",
+        "pavlinter/yii2-display-image": "dev-master",
+        "dmstr/yii2-adminlte-asset": "^2.1",
+        "miloschuman/yii2-highcharts-widget": "^6.0",
+        "sanex/yii2-simple-filter": "dev-master",
+        "perminder-klair/yii2-dropzone": "dev-master"
+
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset":{
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        }
+    }
+}

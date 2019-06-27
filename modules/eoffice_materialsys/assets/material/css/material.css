@@ -1,0 +1,143 @@
+.image{
+    height: 100px;
+    width: 100px;
+}
+.image-center{
+    text-align: center;
+}
+.btn-full{
+    width: 100% !important;
+}
+.vertical{
+    color: #afafaf;
+    vertical-align: middle;
+}
+.active-list{
+    color: #000000;
+}
+.head-box{
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.panel-heading-height{
+    height: 75px !important;
+}
+.title{
+    padding-left: 40px;
+}
+.topic-import{
+    font-size: 20px !important;
+    padding-left: 10px;
+}
+/* Search Input*/
+#custom-search-input{
+    border: solid 1px #E4E4E4;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+
+#detail-bill div{
+    margin-bottom: 0 !important;
+}
+.select2{
+    width: 100% !important;
+}
+.ef-dropzone-size{
+    margin-top:0px;
+    height: 200px !important;
+    max-height: 300px;
+    min-height: inherit !important;
+}
+/* Edit Dropzone view */
+.dz-preview{
+    margin: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+.dz-details{
+    width: 100% !important;
+    height: 100% !important;
+    height: inherit !important;
+}
+.dz-filename{
+    width: 100% !important;
+    height: 100% !important;
+}
+.dz-preview button{
+    cursor: pointer !important;
+}
+.dz-size{
+    width: 100% !important;
+    height: 100% !important;
+    text-align: left !important;
+}
+.dz-details > img{
+    display: block;
+    width: auto !important;
+    height: 100% !important;
+    margin:0 auto;
+    right:0;
+    left:0;
+}
+.dz-progress{
+    top: 140px !important;
+}
+.ef-dz-suc{
+    border: 2px solid #3c763d !important;
+}
+.ef-dz-fa{
+    border: 2px solid #a94442 !important;
+}
+.i-file{
+    width: 100% !important;
+}
+.i-input-file{
+    width: 100% !important;
+}
+.text-tbody div>b{
+    width: 135px;
+    display: inline-block;
+    border-bottom: dashed 1px #b5b2b2;
+}
+/* ========== View  ===========*/
+.title-amount{
+    font-size: 25px !important;
+    color: #8e8d8d !important;
+}
+.title-detail{
+    margin:15px 0 5px 0;
+}
+.title-detail div span:first-of-type{
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    border-bottom: dashed 1px #dad6d6;
+}
+.topic-import{
+    font-size: 20px;
+}

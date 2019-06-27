@@ -1,0 +1,38 @@
+.swal-modal {
+    /*background-color: rgba(255, 255, 255, 0.0) !important;*/
+}
+.nostyle {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+#content > div > div > div > div > div.col-lg-12.well.well-lg.panel > div > p > img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+#content > div > div > div > div > div > div > div.col-lg-12.well.well-lg.panel > div > p > img{
+    max-width: 100% !important;
+    height: auto !important;
+}
+@media print {
+    * {
+        visibility: hidden;
+
+    }
+    #hidden-print{
+        visibility: hidden !important;
+    }
+    #unsentdoc, #unsentdoc * {
+        visibility: visible;
+    }
+    #unsentdoc {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+}

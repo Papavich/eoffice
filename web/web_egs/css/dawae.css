@@ -1,0 +1,234 @@
+.select {
+    min-width: 80%;
+    height: 32px;
+    padding: 0
+}
+
+.small-card {
+    margin-bottom: 0 !important;
+}
+
+.margin-bottom-16 {
+    margin-bottom: 16px;
+}
+
+.small-card > .ant-card-body {
+    padding: 8px;
+}
+
+.ant-radio-wrapper {
+    white-space: initial;
+}
+
+.loading {
+    font-size: 24px;
+    color: #1890ff;
+    width: 100%;
+}
+
+/*.table-col {*/
+/*border: 1px solid #ddd;*/
+/*padding: 4px;*/
+/*margin-bottom: -0.5px;*/
+/*}*/
+
+/*.table {*/
+/*border-collapse: separate;*/
+/*border-spacing: 0 8px;*/
+/*}*/
+
+.table > tbody > tr {
+    margin-bottom: 8px;
+}
+
+.table > thead > tr {
+    border: 2px solid #ddd;
+}
+
+.table > tbody {
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+.table > tbody > tr {
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+}
+
+.table > tbody > tr > td, .table > thead > tr > th {
+    padding: 0 !important;
+    border: 1px solid #ddd !important;
+}
+
+.table-col {
+    padding: 4px;
+    margin-bottom: 0;
+    word-wrap: break-word;
+}
+
+@media screen and (min-width: 576px) {
+
+    .table-col {
+        padding: 8px;
+        margin-bottom: 0;
+    }
+
+    /*.table {*/
+    /*border-collapse: collapse;*/
+    /*border-spacing: 0;*/
+    /*}*/
+    .table > tbody > tr {
+        margin-bottom: 0;
+    }
+}
+
+.ant-card {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#wrapper {
+    background-color: #f1f2f7;
+}
+
+.fc-helper {
+    background-color: #FFD400 !important;
+    border-color: #FFD400 !important;
+    opacity: 0.6;
+}
+
+.selected-defense {
+    background-color: #4ECDC4 !important;
+    border-color: #4ECDC4 !important;
+}
+
+.selected-current {
+    background-color: #FFD400 !important;
+    border-color: #FFD400 !important;
+}
+
+.selected-teacher {
+    background-color: #FF6B6B !important;
+    border-color: #FF6B6B !important;
+}
+
+.vertical-middle {
+    text-align: center;
+    height: 100%;
+}
+
+.vertical-middle:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.vertical-middle * {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.fc-time-grid-event {
+    max-width: 80%;
+}
+
+.background-success {
+    color: white;
+    background-color: #87D068;
+}
+
+@media screen and (min-width: 768px) {
+    .fc {
+        width: 54%;
+    }
+}
+
+.fc {
+    margin: 0 auto;
+}
+
+.fc {
+    cursor: pointer;
+}
+
+.margin-0 {
+    margin: 0 !important;
+}
+
+.ant-tag:hover {
+    opacity: initial;
+}
+
+.ant-input-number-input {
+    color: inherit;
+}
+
+.ant-tag {
+    margin-left: 8px;
+    margin-right: 0;
+    cursor: default;
+}
+
+.tag-empty {
+    background: #FFF;
+    border-style: dashed;
+}
+
+.tag-default {
+    background: #FFF;
+}
+
+.tag-success {
+    border-color: #87D068;
+    background: #87D068;
+    color: white;
+}
+
+.tag-error {
+    border-color: #D9534F;
+    background: #D9534F;
+    color: white;
+}
+
+.tag-medium {
+    height: 32px;
+    line-height: 32px;
+}
+
+.tag-big {
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 37px;
+}
+
+.clickable {
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.clickable:hover {
+    box-shadow: inset 0px 0px 100px 100px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.ant-steps-item-finish > .ant-steps-item-content > .ant-steps-item-description, .ant-steps-small .ant-steps-item-description, .ant-steps-item-description {
+    color: inherit;
+}
+
+.fading {
+    opacity: 0.5;
+}
+
+.hourselect, .minuteselect {
+    height: initial;
+    padding: initial;
+}
+
+.daterangepicker {
+    z-index: 10000 !important;
+}

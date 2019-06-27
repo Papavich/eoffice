@@ -1,0 +1,29 @@
+.btn-full-width{
+    width: 100% !important;
+}
+#type_header{
+    color: #696868;
+}
+#panel-1 .panel-heading{
+    cursor: pointer;
+}
+.widen_id{
+    font-size: 18px !important;
+}
+.content-info h3{
+    margin-bottom: 10px !important;
+}
+.content-info div{
+    width: 350px;
+    display: inline-block;
+}
+.content-info div span:first-of-type{
+    display: inline-block;
+    font-weight: bold;
+    width: 130px;
+}
+.content-info span.pull-right span:first-of-type{
+    display: inline-block;
+    font-weight: bold;
+    width: inherit !important;
+}

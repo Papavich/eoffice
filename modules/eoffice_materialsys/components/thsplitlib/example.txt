@@ -1,0 +1,16 @@
+use namespace for thaisplit
+
+//Create method
+$segment = new Segment();
+
+//Send value to split
+$result = $segment->get_segment_array($text_to_segment);
+
+//Echo loop echo value
+foreach ($result as $row) {
+  echo $row;
+  echo "<br>";
+}
+
+//Echo value
+echo implode(' | ', $result);

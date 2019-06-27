@@ -1,0 +1,19 @@
+
+.table_css {
+    border-collapse: collapse;
+    width: 100%;
+}
+.th_css {
+    color: red;
+    /*border-style: solid;*/
+    /*border-color: black;*/
+    /*border-width: 2px;*/
+    border : solid 2px black !important;
+}
+.td_css {
+    color: red;
+    border : solid 2px black !important;
+}
+.ko{
+    color: red;
+}

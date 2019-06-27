@@ -1,0 +1,8 @@
+﻿BlueImp File Upload Widget for Yii2
+-composer require 2amigos/yii2-file-upload-widget:~1.0
+
+
+composer require phpoffice/phpword
+php composer.phar require bazilio/yii2-async:dev-master
+php composer.phar require pdezwart/php-amqp:dev-master
+php composer.phar require yiisoft/yii2-redis:*

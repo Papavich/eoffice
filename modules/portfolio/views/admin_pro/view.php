@@ -1,0 +1,53 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\DetailView;
+use app\modules\portfolio\models\ProjectMember;
+/* @var $this yii\web\View */
+/* @var $model app\modules\portfolio\models\Project*/
+
+
+$this->params['breadcrumbs'][] = ['label' => 'Projects', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div id="panel-misc-portlet-r1" class="panel panel-info">
+    <div class="panel-heading">
+        <h1><?= Html::encode($this->title) ?></h1>
+
+    </div>
+
+    <div class="panel-body">
+
+    <p>
+        <?= Html::a('Update', ['update', 'id' => $model->project_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->project_id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => 'Are you sure you want to delete this item?',
+                'method' => 'post',
+            ],
+        ]) ?>
+    </p>
+
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+           'project_id',
+            'project_name_thai',
+            'project_name_eng',
+            'budget',
+            'sponsor_sponsor_id',
+            'project_start',
+            'project_end',
+            'project_duration',
+            'project_budget',
+            'repayment',
+            'project_url:url',
+            'year_start',
+            'year_end',
+            'website',
+        ],
+    ]) ?>
+
+    </div>
+</div>

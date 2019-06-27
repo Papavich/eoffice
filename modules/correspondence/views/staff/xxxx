@@ -1,0 +1,128 @@
+
+                <!-- ----------------------------FORM---------------------------------------- -->
+                <?php $form = ActiveForm::begin(['action'=>'createreceive'],['options' => ['class' => 'form-horizontal', 'enctype' => 'multipart/form-data']]) ?>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">เลขที่รับเข้า:</label>
+                    <div class="col-sm-5">
+                        <?php echo $form->field($model_doc, 'doc_id'
+                        )->textInput()->input('text', ['placeholder' => "0001", 'id' => 'doc_roll_id'])
+                            ->label(false); ?>
+                    </div>
+                </div>
+                <!-- date book -->
+                <div class="form-group">
+                    <label class="control-label col-sm-2">วันที่รับเข้า : </label>
+                    <div class="col-sm-5">
+                        <?php echo $form->field($model_doc, 'doc_date', [
+                            'inputOptions' => ['class' => 'form-control datepicker']
+                        ])->textInput()->input('text', ['data-format' => 'yyyy-mm-dd', 'data-lang' => 'en', 'placeholder' => "กดเลือกวันที่ในหนังสือเท่านั้น",
+                            'id' => 'doc_roll_id'])->label(false); ?>
+                    </div>
+                </div>
+                <!-- date receive -->
+                <div class="form-group">
+                    <label class="control-label col-sm-2">ลงวันที่(หนังสือ) : </label>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                        <input type="text" class="form-control datepicker" disabled
+                               value="<?= controllers::DateThai($date->format('Y-m-d H:i:s')); ?>">
+                        </div>
+                    </div>
+                </div><br>
+                <!-- code book -->
+                <div class="form-group">
+                    <label class="control-label col-sm-2">เลขที่(หนังสือ):</label>
+                    <div class="col-sm-5">
+                        <?php echo $form->field($model_doc, 'doc_id_auto', [
+                            'inputOptions' => ['class' => 'form-control']
+                        ])->textInput()->input('text', ['placeholder' => "ศธ.0514.2.1.3/332"])->label(false); ?>
+                    </div>
+                </div>
+                <!-- secret -->
+                <div class="form-group">
+                    <label class="control-label col-sm-2">ชั้นความลับ : </label>
+                    <div class="col-sm-5">
+                            <?php echo $form->field($model_doc, 'doc_date')->dropDownList(
+                                    ['' => '--- กรุณาเลือกชั้นความลับ ---', '1' => 'ปกติ'
+                                        , '2' => 'ลับ', '3' => 'ลับมาก', '4' => 'ลับที่สุด']
+                            )->label(false); ?>
+                    </div>
+                </div>
+                <!-- fast -->
+                <div class="form-group">
+                    <label class="control-label col-sm-2">ชั้นความเร็ว : </label>
+                    <div class="col-sm-5">
+                            <?php echo $form->field($model_doc, 'doc_date')->dropDownList(
+                                ['' => '--- กรุณาเลือกชั้นความเร็ว ---', '1' => 'ปกติ'
+                                    , '2' => 'ด่วน', '3' => 'ด่วนมาก', '4' => 'ด่วนที่สุด']
+                            )->label(false); ?>
+
+                    </div>
+                </div>
+                <!-- topic -->
+                <div class="form-group">
+                    <label class="control-label col-sm-2">ชื่อเรื่อง:</label>
+                    <div class="col-sm-5">
+                        <?php echo $form->field($model_doc, 'doc_subject'
+                        )->textarea(['placeholder' => "รายงานการประชุมเกี่ยวกับ..."])->label(false); ?>
+                    </div>
+                </div>
+                <!-- from -->
+                <div class="form-group">
+                    <label class="control-label col-sm-2">ส่งมาจาก:</label>
+                    <div class="col-sm-5">
+                        <?php echo $form->field($model_doc, 'doc_address'
+                        )->textInput()->input('text', ['placeholder' => "คณะ/หน่วยงาน..."])
+                            ->label(false); ?>
+                    </div>
+                </div>
+                <!-- type -->
+                <div class="form-group">
+                    <label class="control-label col-sm-2">ประเภทหนังสือ : </label>
+                    <div class="col-sm-5">
+                            <?php echo $form->field($model_doc, 'doc_date')->dropDownList(
+                                ['' => '--- กรุณาเลือกประเภทหนังสือ ---', '1' => 'หนังสือภายใน'
+                                    , '2' => 'หนังสือภายนอก', '3' => 'หนังสือประทับตรา', '4' => 'หนังสือสั่งการ'
+                                    , '4' => 'หนังสือสั่งการ', '5' => 'หนังสือประชาสัมพันธ์', '6' => 'หนังสือ', '7' => 'หนังสือสั่งการ' ]
+                            )->label(false); ?>
+                    </div>
+                </div>
+                <!-- address -->
+                <div class="form-group">
+                    <label class="control-label col-sm-2">สถานที่เก็บต้นฉบับ:</label>
+                    <div class="col-sm-5">
+                        <?php echo $form->field($model_doc, 'doc_address'
+                        )->textInput()->input('text', ['placeholder' => "ห้อง... ชั้น... ล๊อก..."])
+                            ->label(false); ?>
+                    </div>
+                </div>
+
+                <!-- button submit -->
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">บันทึก</button>
+                    </div>
+                </div>
+
+                <?php echo $form->field($model_doc, 'receive_date')->textInput()->
+                input('hidden', ['value' => $date->format('Y-m-d H:i:s'),
+                ])->label(false); ?>
+
+                <?php ActiveForm::end() ?>
+                <!-- ----------------------------FORM---------------------------------------- -->
+
+                <!-- upload file -->
+                        <?php
+                        echo \kato\DropZone::widget([
+                            'options' => [
+                                'url' => 'createreceive',
+                                'maxFilesize' => '2',
+
+                            ],
+                            'clientEvents' => [
+                                'complete' => "function(file){console.log(file)}",
+                                'removedfile' => "function(file){alert(file.name + ' is removed')}"
+                            ],
+                        ]);
+                        ?>
+

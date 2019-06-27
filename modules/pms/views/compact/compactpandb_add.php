@@ -1,0 +1,47 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: alexr
+ * Date: 12/2/2561
+ * Time: 21:41
+ */
+?>
+
+<header id="page-header">
+
+    <?php
+    if(!$modelcompacthasprosub->isNewRecord){
+        echo "<h1><strong>แก้ไขเอกสารอนุมัติจัดโครงการพร้อมขอใช้งบประมาณ</strong></h1>";
+    }else{
+        echo "<h1><strong>เพิ่มเอกสารอนุมัติจัดโครงการพร้อมขอใช้งบประมาณ</strong></h1>";
+    }
+    ?>
+</header>
+<div id="content" class="padding-20">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+
+                    <?php
+                    if(!$modelcompacthasprosub->isNewRecord){
+                        echo $this->render('compactpandb_form',[
+                            'modelcompacthasprosub'=>$modelcompacthasprosub,
+                            'execute'=>$execute,'id'=>$id,
+                            'modelprosub'=>$modelprosub,
+                            'compact'=>$compact,
+                            'prosubbudget'=>$prosubbudget,
+                            'manager'=>$manager,
+                        ]);
+                    }else{
+                        echo $this->render('compactpandb_form',[
+                            'modelcompacthasprosub'=>$modelcompacthasprosub,
+                            'execute'=>$execute,'id'=>$id,
+                            'modelprosub'=>$modelprosub,
+                            'prosubbudget'=>$prosubbudget,
+                            'manager'=>$manager,
+                            ]);
+                    }
+
+                    ?>

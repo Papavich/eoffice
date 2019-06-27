@@ -1,0 +1,273 @@
+<?php
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use app\modules\personsystem\controllers;
+use kartik\widgets\DepDrop;
+use kartik\select2\Select2;
+use yii\helpers\ArrayHelper;
+/* @var $form yii\widgets\ActiveForm */
+/**
+ * Created by PhpStorm.
+ * User: User
+ * Date: 4/8/2018
+ * Time: 11:54 PM
+ */
+?>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="list-group">
+                <a class="list-group-item" href="<?= Yii::getAlias('@web') . '/admin/user' ?>"><i
+                            class="glyphicon glyphicon-chevron-right pull-right"></i><span><?= yii::t('app', 'Users'); ?></span></a>
+                <a class="list-group-item" href="<?= Yii::getAlias('@web') . '/admin/assignment' ?>"><i
+                            class="glyphicon glyphicon-chevron-right pull-right"></i><span><?= yii::t('app', 'Assignments'); ?></span></a>
+                <a class="list-group-item" href="<?= Yii::getAlias('@web') . '/admin/role' ?>"><i
+                            class="glyphicon glyphicon-chevron-right pull-right"></i><span><?= yii::t('app', 'Roles'); ?></span></a>
+                <a class="list-group-item" href="<?= Yii::getAlias('@web') . '/admin/permission' ?>"><i
+                            class="glyphicon glyphicon-chevron-right pull-right"></i><span><?= yii::t('app', 'Permissions'); ?></span></a>
+                <a class="list-group-item" href="<?= Yii::getAlias('@web') . '/admin/route' ?>"><i
+                            class="glyphicon glyphicon-chevron-right pull-right"></i><span><?= yii::t('app', 'Routes'); ?></span></a>
+                <a class="list-group-item" href="<?= Yii::getAlias('@web') . '/admin/rule' ?>"><i
+                            class="glyphicon glyphicon-chevron-right pull-right"></i><span><?= yii::t('app', 'Rules'); ?></span></a>
+                <a class="list-group-item" href="<?= Yii::getAlias('@web') . '/admin/menu' ?>"><i
+                            class="glyphicon glyphicon-chevron-right pull-right"></i><span><?= yii::t('app', 'Menus'); ?></span></a>
+                <a class="list-group-item active" href="<?= Yii::getAlias('@web') . '/personsystem/assign/assign-student' ?>"><i
+                            class="glyphicon glyphicon-chevron-right pull-right"></i><span><?= yii::t('app', 'Assignment Student'); ?></span></a>
+                <a class="list-group-item" href="<?= Yii::getAlias('@web').'/personsystem/assign/revoke-student' ?>"><i
+                            class="glyphicon glyphicon-chevron-right pull-right"></i><span><?= yii::t('app', 'Revoke Student'); ?></span></a>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="assignment-index">
+                <h1><?= yii::t('app', 'Assignment Student'); ?></h1>
+<br/>            <?php $form = ActiveForm::begin(['id' => 'assign','options' => ['enctype' => 'multipart/form-data'],'action' => 'assign-student', 'method' => 'get']); ?>
+                <div class="row">
+                    <div class="col-md-3">
+                    <fieldset>
+                        <div class="form-group">
+                            <label><b><?= controllers::t('label','Select Major') ?></b></label>
+                            <select  name="major" id="major"  class="form-control">
+                                <option id="0" value="">เลือกสาขา</option>
+                                <?php
+                                if($Major!=null){
+                                foreach ($Major as $key => $item) { ?>
+                                    <option id="<?= $item->major_code ?>" value="<?= $item->major_id ?>"<?php if ($item->major_id == $majorRequest && $majorRequest!= null) {
+                                        echo "selected";
+                                    } ?>><?= $item->major_name ?></option>
+                                    <?php }}?>
+                            </select>
+                        </div>
+                    </fieldset>
+                    </div>
+                    <div class="col-md-3">
+                        <fieldset>
+                            <div class="form-group2">
+                                <label><b><?= controllers::t('label','Level') ?></b></label>
+                                <select name="level" id="level" class="form-control">
+                                    <option id="0" value="">เลือกระดับการศึกษา</option>
+                                    <?php
+                                    if($Level!=null){
+                                    foreach ($Level as $key => $item) { ?>
+                                        <option value="<?= $item->LEVELID ?>" <?php if($item->LEVELID==$levelRequest && $levelRequest!=null){echo "selected";} ?>><?= $item->LEVELNAME?></option>
+                                    <?php }} ?>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-2">
+                        <fieldset>
+                            <div class="form-group2">
+                                <label><b><?= controllers::t('label','Year') ?></b></label>
+                                <select name="year" id="year" class="form-control">
+                                    <option id="0" value="">เลือกปี</option>
+                                    <?php
+                                    if($StudentYear!=null){
+                                    foreach ($StudentYear as $key => $item) { ?>
+                                        <option value="<?= $item->ADMITACADYEAR ?>"<?php if($item->ADMITACADYEAR==$yearRequest && $yearRequest!=null){echo "selected";} ?>><?= $item->ADMITACADYEAR ?></option>
+                                    <?php }} ?>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-2">
+                        <fieldset>
+                            <div class="form-group2">
+                                <label><b><?= controllers::t('label','Semester') ?></b></label>
+                                <select name="semester" id="semester" class="form-control">
+                                    <option id="0" value="">เลือกเทอม</option>
+                                    <?php
+                                    if($Admitsemester!=null){
+                                    foreach ($Admitsemester as $key => $item) { ?>
+                                        <option value="<?= $item->ADMITSEMESTER ?>" <?php if($item->ADMITSEMESTER==$semesterRequest && $semesterRequest!=null){echo "selected";} ?>><?= $item->ADMITSEMESTER ?></option>
+                                    <?php }} ?>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-2">
+                        <label><b><?= controllers::t('label','View') ?></b></label><br/>
+                        <button  type="submit" onClick="this.form.action='assign-student'; submit()" class="btn btn-success">View <i class="fa fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="the_form"></div>
+                        <center>
+                            <fieldset>
+                                <select multiple name="fromBox" id="fromBox">
+                                    <?php if($AuthItem!=null){ foreach ($AuthItem as $key => $item) { ?>
+                                        <option value="<?= $item->parent ?>"><?= $item->parent ?></option>
+                                    <?php }} ?>
+                                </select>
+                                <select  name="toBox[]" id="toBox" multiple>
+
+                                </select>
+                            </fieldset>
+                        </center>
+                        <br/><br/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+<!--                        <input type="button" class="btn btn-block btn-success" onclick="myFunction()" value="Save" id="submit">-->
+                        <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-block btn-success','id'=>'form']) ?>
+                        <?php ActiveForm::end(); ?>
+                    </div>
+                </div>
+                </div>
+                <br/>
+            <div class="row">
+                <?php
+                $url = $_SERVER['REQUEST_URI'];
+                $parts = parse_url($url);
+               if(array_key_exists("query",$parts)){
+                   parse_str($parts['query'], $query);
+               }
+
+                ?>
+                <div class="col-md-12">
+                    <div class="table-responsive"><br/>
+                        <b>รายชื่อนักศึกษา</b>
+                        <table  id="assignstudent"  class="table table-bordered nomargin" style="width:100%">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th><?= controllers::t('label','Student ID') ?></th>
+                                <th><?= controllers::t('label','Name') ?></th>
+                                <th><?= controllers::t('label','Major') ?></th>
+                                <th><?= controllers::t('label','Level') ?></th>
+                                <th><?= controllers::t('label','Year') ?></th>
+                                <th><?= controllers::t('label','Semester') ?></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <?php
+                            if(array_key_exists("query",$parts)&&$student!=null) {
+                                foreach ($student as $value => $item) {
+                                    echo "<tr><td>$value</td><td>$item->STUDENTCODE</td><td>$item->STUDENTNAME   $item->STUDENTSURNAME</td><td>$item->major_name</td><td>$item->LEVELNAME</td><td>$item->ADMITACADYEAR</td><td>$item->ADMITSEMESTER</td></tr>";
+                                }
+                            }
+                            ?>
+
+                            </tbody>
+                        </table>
+                        <br/><br/><br/>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+<script>
+    $(document).ready(function(){
+        "use strict";
+        $('#form').click(function(e){
+            e.preventDefault();
+            // 12,13,11 (สภาพนักศึกษา พ้นสภาพ,ลาพัก)
+            var arayval = new Array();
+            var toBox = document.getElementById("toBox");
+            var major = document.getElementById("major");
+            var year = document.getElementById("year");
+            var level = document.getElementById("level");
+            var semester = document.getElementById("semester");
+            var form = document.getElementById("assign");
+            var i,j;
+            var major1 = major.value; var year1 = year.value; var level1 = level.value; var semester1 = semester.value;
+            //ลูป for วนiคือเอาค่า academic_positions_abb(ค่าใน Database) วนjคือเอาค่า อีเมล (ค่าใน Select)
+            for (i = 0; i < toBox.length; i++) {
+                arayval[i] = toBox.options[i].value; //VALUE //
+            }
+             // alert(major1);
+            $.ajax({
+             //   url: '../assign/assign-student',
+                url: '../assign/tobox-assign',
+                data: {
+                    'toVal': arayval,
+                    'major': major1,
+                    'year': year1,
+                    'level': level1,
+                    'semester': semester1,
+                },
+                type: "get",
+                beforeSend: function () {
+                    swalLoading()
+                },
+                success: function (data) {
+                    if (data) {
+
+                      //  $( "#submit" ).click();
+                        // $( "#assign" ).submit();
+                        swal("Success!",data);
+                      //  location.reload();
+                        //window.location.href ="../assign/assign-student";
+                    }
+                    swal.close()
+                }
+            });
+        });
+    });
+</script>
+    <script>
+//        $(document).ready(function(){
+//            "use strict";
+//
+//            $('#major').change(function(e){
+//                e.preventDefault();
+//                $( "#assign" ).submit();
+//            });
+//            $('#level').change(function(e){
+//                e.preventDefault();
+//                $( "#assign" ).submit();
+//            });
+//            $('#semester').change(function(e){
+//                e.preventDefault();
+//                $( "#assign" ).submit();
+//            });
+//            $('#year').change(function(e){
+//                e.preventDefault();
+//                $( "#assign" ).submit();
+//            });
+//        });
+    </script>
+    <script type="text/javascript">var epro_path = "<?=Yii::getAlias( "@web" )?>";</script>
+<script type="text/javascript">var plugin_path = '<?= Yii::getAlias('@web') ?>/plugins/';</script>
+<?php foreach (Yii::$app->session->getAllFlashes() as $message):; ?>
+    <?php
+    echo \kartik\widgets\Growl::widget([
+        'type' => (!empty($message['type'])) ? $message['type'] : 'danger',
+        'title' => (!empty($message['title'])) ? \yii\helpers\Html::encode($message['title']) : 'Title Not Set!',
+        'icon' => (!empty($message['icon'])) ? $message['icon'] : 'fa fa-info',
+        'body' => (!empty($message['message'])) ? \yii\helpers\Html::encode($message['message']) : 'Message Not Set!',
+        'showSeparator' => true,
+        'delay' => 1, //This delay is how long before the message shows
+        'pluginOptions' => [
+            'delay' => (!empty($message['duration'])) ? $message['duration'] : 3000, //This delay is how long the message shows for
+            'placement' => [
+                'from' => (!empty($message['positonY'])) ? $message['positonY'] : 'top',
+                'align' => (!empty($message['positonX'])) ? $message['positonX'] : 'right',
+            ]
+        ]
+    ]);
+    ?>
+<?php endforeach; ?>

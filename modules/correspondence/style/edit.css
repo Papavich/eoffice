@@ -1,0 +1,92 @@
+body{
+    font-size: 18px !important;
+}
+@media only screen and (max-width: 768px)
+{
+    body.menu-open #aside ul.nav>li>a span {
+        display: inline !important;
+    }
+    .dategraph{
+        width: 100%;
+    }
+}
+input.search {
+    width: 350px;
+    margin: 10px 10px 0px 60px;
+    height: 32px;
+    background-color: white;
+    border: 0px;
+    border-radius: 5px 5px 5px 5px;
+    font-size: medium;
+    padding: 10px;
+}
+
+.form-control {
+    border-radius: 5px 5px 5px 5px !important;
+}
+.fancy-form-select{
+    border-radius: 5px 5px 5px 5px;
+}
+.select2{
+    border-radius: 5px 5px 5px 5px !important;
+}
+#cmsdocument-address_id {
+    border-radius: 5px 5px 5px 5px !important;
+}
+h1.sendroll {
+    padding: 0px;
+    margin: 0px;
+}
+
+button#search {
+    font-size: medium;
+}
+
+.box {
+    border-top: 0px solid #d2d6de;
+}
+
+table {
+    color: black;
+}
+
+.connecting-line {
+    width: 60%;
+    border: 4px solid #ffca60;
+}
+
+.wizard .nav-tabs {
+    margin: 0px;
+}
+
+.btnw {
+    width: 70px;
+    height: 20px;
+}
+
+th {
+    text-align: center;
+}
+
+div#receive-text {
+    font-size: 30px;
+    padding-top: 30px;
+    color: black;
+}
+
+div#container-receive {
+    padding: 0 5% 5% 5%;
+}
+
+div#detail-text {
+    padding: 3%;
+    font-size: 30px;
+    color: black;
+}
+
+h1.comment {
+    background-color: dimgrey;
+    color: white;
+    font-size: 25px;
+}
+

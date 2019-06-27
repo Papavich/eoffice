@@ -1,0 +1,27 @@
+<?php
+return [
+    'Home' => 'หน้าหลัก',
+    'Form' => 'แบบฟอร์ม',
+    'File a Request' => 'ยื่นคำร้องใหม่',
+    'Manage Form' => 'จัดการแบบฟอร์ม',
+    'Create New Form' => 'สร้างแบบฟอร์มใหม่',
+    'Consider' => 'พิจารณาคำร้อง',
+    'Consider New Form' => 'พิจารณาคำร้องใหม่',
+    'Considered' => 'คำร้องที่พิจารณาแล้ว',
+    'Report' => 'แจ้งปัญหา',
+    'Bug Report' => 'แจ้งปัญหาที่พบ',
+    'Tracking Bug Report' => 'ติดตามปัญหา',
+    'Check Bug Report' => 'ตรวจสอบปัญหา',
+    'Help' => 'ช่วยเหลือ',
+    'Guide' => 'คู่มือการใช้งาน',
+    'Tracking Form' => 'ติดตามคำร้อง',
+    'Template' => 'แบบฟอร์ม',
+    'FAQ' => 'คำถามที่พบบ่อย',
+    'Contact Us' => 'ติดต่อเรา',
+    'Approve' => 'ผู้พิจารณา',
+    'Position' => 'ตำแหน่ง',
+    'Approve Manage' => 'ตรวจสอบผู้พิจารณา',
+    'Assign' => 'การดำรงตำแหน่ง',
+    'Acting' => 'รักษาการแทน',
+    ];
+    ?>

@@ -1,0 +1,34 @@
+<svg width="1024" height="768" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="770" width="1026" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_3" y="72.001121" x="465.999304" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">เริ่มต้น</text>
+  <rect id="svg_11" height="64.000997" width="322.671693" y="140.002182" x="329.997185" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_5" y="181.336162" x="375.331223" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">กดทำแบบอนุมัติหลักการ</text>
+  <rect stroke="#000" id="svg_12" height="64.000997" width="412.006441" y="250.670573" x="288.663195" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_6" y="289.33784" x="309.996874" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">กรอกข้อมูลในฟอร์มขออนุมัติหลักการ</text>
+  <rect stroke="#000" id="svg_13" height="64.000997" width="148.00231" y="362.672322" x="425.998668" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_7" y="404.006295" x="453.999113" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">กดบันทึก</text>
+  <rect stroke="#000" id="svg_14" height="64.000997" width="465.340587" y="472.00734" x="261.996127" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+  <text stroke="#000" xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_8" y="513.341328" x="291.329917" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">กรอกข้อมูลแผนการยืมเงินและสัญญายืมเงิน</text>
+  <rect stroke="#000" id="svg_15" height="64.000997" width="142.668877" y="582.675744" x="428.665397" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+  <text transform="rotate(-0.6348870396614075 499.1274719238488,613.322937011718) " xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_9" y="621.343022" x="453.999118" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">กดบันทึก</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_16" y="736.01147" x="429.998744" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">จบการทำงาน</text>
+  <path id="svg_25" d="m434.815581,32.129429l124.798232,0l0,0c16.348923,0 29.602313,14.028635 29.602313,31.333825c0,17.305183 -13.253395,31.333812 -29.602313,31.333812l-124.798232,0l0,0c-16.348905,0 -29.602313,-14.028629 -29.602313,-31.333812c0,-17.305196 13.253408,-31.333825 29.602313,-31.333825z" stroke-opacity="null" stroke-width="3" stroke="#000" fill="none"/>
+  <path id="svg_26" d="m434.815564,696.139739l124.79824,0l0,0c16.34892,0 29.60231,14.02864 29.60231,31.33382c0,17.30519 -13.2534,31.33382 -29.60231,31.33382l-124.79824,0l0,0c-16.3489,0 -29.60231,-14.02863 -29.60231,-31.33382c0,-17.30519 13.25341,-31.33382 29.60231,-31.33382z" fill-opacity="null" stroke-opacity="null" stroke-width="3" stroke="#000" fill="none"/>
+  <path transform="rotate(179.8323211669922 495.5372619628906,116.67002868652344) " id="svg_27" d="m487.537153,116.61563l8.000113,-22.612612l8.000113,22.612612l-4.000057,0l0,22.72142l-8.000112,0l0,-22.72142l-4.000057,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <path transform="rotate(179.8323211669922 498.2039794921875,226.0050506591797) " id="svg_28" d="m490.203866,225.950665l8.00011,-22.61261l8.00011,22.61261l-4.00006,0l0,22.72142l-8.00011,0l0,-22.72142l-4.00005,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <path transform="rotate(179.8323211669922 500.87066650390625,338.00683593750006) " id="svg_29" d="m492.870574,337.952405l8.00011,-22.61261l8.00011,22.61261l-4.00006,0l0,22.72142l-8.00011,0l0,-22.72142l-4.00005,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <path transform="rotate(179.8323211669922 502.20401000976574,448.6752014160157) " id="svg_30" d="m494.203928,448.620795l8.00011,-22.61261l8.00011,22.61261l-4.00006,0l0,22.72142l-8.00011,0l0,-22.72142l-4.00005,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <path transform="rotate(179.8323211669922 502.2040405273438,559.3436279296876) " id="svg_31" d="m494.203928,559.289203l8.00011,-22.61261l8.00011,22.61261l-4.00006,0l0,22.72142l-8.00011,0l0,-22.72142l-4.00005,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <path transform="rotate(179.8323211669922 500.87066650390625,670.0120239257814) " id="svg_32" d="m492.870567,669.95759l8.00012,-22.61261l8.00011,22.61261l-4.00006,0l0,22.72142l-8.00011,0l0,-22.72142l-4.00006,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+ </g>
+</svg>
