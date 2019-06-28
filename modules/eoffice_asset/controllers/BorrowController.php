@@ -33,6 +33,11 @@ class BorrowController extends Controller
             ],
         ];
     }
+    public function beforeAction($action) 
+    { 
+        $this->enableCsrfValidation = false; 
+        return parent::beforeAction($action); 
+    }
 
     /**
      * Lists all AssetBorrow models.

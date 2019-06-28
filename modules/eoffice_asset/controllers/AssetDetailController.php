@@ -45,6 +45,12 @@ class AssetDetailController extends Controller
         ];
     }
 
+    public function beforeAction($action) 
+    { 
+        $this->enableCsrfValidation = false; 
+        return parent::beforeAction($action); 
+    }
+
     /**
      * Lists all AssetDetail models.
      * @return mixed
@@ -209,9 +215,5 @@ class AssetDetailController extends Controller
         }
     }
 
-    public function beforeAction($action) 
-    { 
-        $this->enableCsrfValidation = false; 
-        return parent::beforeAction($action); 
-    }
+    
 }
