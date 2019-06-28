@@ -39,7 +39,7 @@ class AssetDetailController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['GET'],
                 ],
             ],
         ];
@@ -166,9 +166,10 @@ class AssetDetailController extends Controller
      * @return mixed
      */
 
-
     public function actionDelete($id)
     {
+        $this->layout = "main_modules";
+
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

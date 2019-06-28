@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="panel-body">
             <?php $form = ActiveForm::begin([
                 'action' => ['index'],
-                'method' => 'get',
+                'method' => 'GET',
             ]); ?>
             <div class="row">
                 <div class="form-group">
