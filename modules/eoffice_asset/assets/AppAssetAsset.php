@@ -34,5 +34,6 @@ class AppAssetAsset extends AssetBundle
 
         'yii\bootstrap\BootstrapAsset',
         //'yii\web\YiiAsset',
+        'yii\web\YiiAsset',
     ];
 }

@@ -39,7 +39,7 @@ class AssetDetailController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['GET'],
+                    'delete' => ['POST'],
                 ],
             ],
         ];
@@ -207,5 +207,11 @@ class AssetDetailController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function beforeAction($action) 
+    { 
+        $this->enableCsrfValidation = false; 
+        return parent::beforeAction($action); 
     }
 }
