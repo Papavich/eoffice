@@ -150,17 +150,18 @@ use kartik\widgets\FileInput;
                             <!-- end:row -->
                         </div>
                     </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
             </div>
+            <?php DynamicFormWidget::end(); ?>
         </div>
-        <?php DynamicFormWidget::end(); ?>
-
-        <div class="form-group">
-            <?= Html::submitButton($modelBorrowDetail->isNewRecord ? 'Create' : 'Update', ['class' => 'btn btn-primary']) ?>
-        </div>
-
-        <?php ActiveForm::end(); ?>
     </div>
+
+    <div class="form-group">
+        <?= Html::submitButton($modelBorrowDetail->isNewRecord ? 'Create' : 'Update', ['class' => 'btn btn-primary']) ?>
+    </div>
+
+    <?php ActiveForm::end(); ?>
+
 </div>
 
 
