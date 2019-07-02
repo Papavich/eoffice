@@ -14,12 +14,13 @@ class ModelAssetBorrowDetail extends \yii\base\Model
      * @param array $multipleModels
      * @return array
      */
-    public static function createMultiple($modelClass, $multipleModels = [])
+    public static function createMultiple($modelClass, $multipleModels = null)
     {
         $model    = new $modelClass;
         $formName = $model->formName();
         $post     = Yii::$app->request->post($formName);
         $models   = [];
+        $flag     = false;
 
         if (! empty($multipleModels)) {
             $keys = array_keys(ArrayHelper::map($multipleModels, 'borrow_detail_id', 'borrow_detail_id'));
