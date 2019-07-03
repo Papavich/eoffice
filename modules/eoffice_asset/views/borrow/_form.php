@@ -120,6 +120,24 @@ use kartik\widgets\FileInput;
             </div>
             <div class="panel-body container-items"><!-- widgetContainer -->
                 <?php foreach ($modelsBorrowDetail as $i => $modelBorrowDetail): ?>
+                <div class="panel-body">
+                <?php $i=0 ?>
+
+                                <span class="panel-title-address">รายการที่: <?= ($i += 1) ?></span>
+                                    <tbody>
+                                    <tr>
+                                    <div class="row">
+                                <div class="col-sm-6">
+                                        <td width="65%"><?php echo $form->field($modelBorrowDetail,
+                                        "[{$i}]borrow_detail_asset_id")->dropDownList(ArrayHelper::map(AssetDetail::find()->all(),
+                                        'asset_detail_id', 'asset_detail_name'),['prompt'=>'เลือกครุภัณฑ์']);
+                                    ?></td>
+                                     </div><!-- end:row -->
+
+<!-- end:row -->
+</div>
+                                    </tr>
+                                    
              
                     <div class="item panel panel-default"><!-- widgetBody -->
                         <div class="panel-heading">

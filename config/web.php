@@ -37,6 +37,11 @@ $config = [
         'Consulting' => [
             'class' => 'app\modules\consulting\controllers',
         ],
+        'Sold' => [
+
+            'class' => 'app\modules\Sold\Module',
+
+        ],
         'eoffice_exam' => [
             'class' => 'app\modules\eoffice_exam\controllers',
         ],

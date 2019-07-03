@@ -126,7 +126,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="item panel panel-success"><!-- widgetBody -->
                         <div class="panel-heading">
                             <?php $x=1; ?>
-                            <span class="panel-title-address">ประเภทครุภัณฑ์กลุ่มที่: <?php echo $x++ ?></span>
+                            <span class="panel-title-address">ประเภทครุภัณฑ์กลุ่มที่: <?php echo $x+1 ?></span>
                             <button type="button" class="pull-right remove-item btn btn-danger btn-xs"><i class="fa fa-minus"></i></button>
                             <div class="clearfix"></div>
                         </div>

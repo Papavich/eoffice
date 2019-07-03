@@ -44,6 +44,7 @@ class AssetBorrow extends \yii\db\ActiveRecord
             [['borrow_user_fname', 'borrow_user_lname'], 'string', 'max' => 45],
             [['borrow_user_tel'], 'string', 'max' => 11],
             [['borrow_object'], 'string', 'max' => 300],
+            ['borrow_id', 'each', 'rule' => ['integer']],
         ];
     }
 
