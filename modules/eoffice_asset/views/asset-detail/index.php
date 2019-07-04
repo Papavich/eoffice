@@ -9,6 +9,7 @@ use app\modules\eoffice_asset\models\AssetTypeDepartment;
 
 use yii\helpers\ArrayHelper;
 use yii\db\ActiveQuery;
+use app\modules\eoffice_asset\models\AssetGet;
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\eoffice_asset\models\AssetdetailSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -41,6 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 
+
         <!-- panel content -->
         <div class="panel-body">
             <?php $form = ActiveForm::begin([
@@ -68,6 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
 
             </div>
+            <?= Html::a('EXCEL', ['excel'], ['class' => 'btn btn-primary']) ?>
             <?php ActiveForm::end(); ?>
             <hr />
             <center><h2>ผลการค้นหา</h2></center>
@@ -101,6 +104,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
     </div>
+    
 
 
 </div>

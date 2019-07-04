@@ -7,7 +7,6 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\eoffice_asset\models\AssetDetail */
 
-
 ?>
 
 <div>
@@ -26,6 +25,7 @@ use yii\helpers\Html;
     <div id="content" class="padding-20">
         <!--content-->
         <div class="asset-detail-view">
+        <h1><?= Html::encode($this->title) ?></h1>
             <?= $this->render('_form2', [
                 'modelAsset' => $modelAsset,
                 'modelsAssetDetail' =>  $modelsAssetDetail
@@ -35,5 +35,7 @@ use yii\helpers\Html;
         <!--end content-->
     </div>
 </div>
+
+
 
 
