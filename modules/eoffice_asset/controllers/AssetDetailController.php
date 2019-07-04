@@ -137,7 +137,7 @@ class AssetDetailController extends Controller
         $query = $connection->createCommand("SELECT asset.*,asset_detail.* FROM asset,asset_detail WHERE asset.asset_id = asset_detail.asset_asset_id");
        $model = $query->queryAll();
 
-        foreach($model as $item){ //วนลูปหาพนักงานทั้งหมด
+        foreach($model as $item){ //วนลูปหาครุภัณฑ์ทั้งหมด
             $room = EofficeCentralViewPisRoom::findOne($item["asset_detail_room"])->rooms_name;
 
 
@@ -158,7 +158,7 @@ class AssetDetailController extends Controller
 
 
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-        $objWriter->save('myData.xlsx'); // Save File เป็นชื่อ myData.xlsx
+        $objWriter->save('Asset_list.xlsx'); // Save File เป็นชื่อ myData.xlsx
         echo Html::a('ดาวน์โหลดเอกสาร', Url::to(Yii::getAlias('@web').'/myData.xlsx'), ['class' => 'btn btn-info']);  //สร้าง link download
     }
 

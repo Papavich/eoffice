@@ -7,7 +7,7 @@ use app\modules\eoffice_asset\controllers;
         <div class="panel-heading">
 							<span class="title elipsis">
 								<strong>DEMO E-OFFICE PROJECT</strong> <!-- panel title -->
-								<small class="size-12 weight-300 text-mutted hidden-xs">2017</small>
+								<small class="size-12 weight-300 text-mutted hidden-xs">2019</small>
 							</span>
 
             <!-- right options -->
