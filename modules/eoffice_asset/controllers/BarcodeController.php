@@ -53,6 +53,7 @@ class BarcodeController extends Controller
         ]);
 
         // return the pdf output as per the destination setting
+
         return $pdf->render();
     }
 
