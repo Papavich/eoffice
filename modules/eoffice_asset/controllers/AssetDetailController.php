@@ -158,8 +158,8 @@ class AssetDetailController extends Controller
 
 
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-        $objWriter->save('Asset_list.xlsx'); // Save File เป็นชื่อ myData.xlsx
-        echo Html::a('ดาวน์โหลดเอกสาร', Url::to(Yii::getAlias('@web').'/myData.xlsx'), ['class' => 'btn btn-info']);  //สร้าง link download
+        $objWriter->save('DATA_Asset_list.xlsx'); // Save File เป็นชื่อ myData.xlsx
+        echo Html::a('ดาวน์โหลดเอกสาร', Url::to(Yii::getAlias('@web').'/DATA_Asset_list.xlsx'), ['class' => 'btn btn-info']);  //สร้าง link download
     }
 
     public function actionCreate()

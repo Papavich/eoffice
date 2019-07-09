@@ -54,6 +54,7 @@ use yii\widgets\GridView;
                     </tr>
                     </thead>
                     <tbody>
+                    
                     <?php  $x=1;  foreach ($modelA as $value):?>
                         <tr>
                             <td><?php  echo $x++; ?></td>
@@ -67,6 +68,7 @@ use yii\widgets\GridView;
                     <?php endforeach; ?>
                     </tbody>
                 </table>
+            <!-- ใส่ view ตรงนี้ -->
             </div>
         </div>
     </div>
