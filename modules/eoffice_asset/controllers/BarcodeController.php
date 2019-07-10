@@ -10,7 +10,7 @@ use kartik\mpdf\Pdf;
 
 class BarcodeController extends Controller
 {
-    public function actionIndex(array $asset_detail_id)
+    public function actionIndex($asset_detail_id)
     {
         $content = $this->renderPartial('index', [
             'model' => $asset_detail_id,
