@@ -1,208 +1,111 @@
-Yii 2 Basic Project Template
-============================
+# QR Code
 
-Yii 2 Basic Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-rapidly creating small projects.
+*By [endroid](https://endroid.nl/)*
 
-The template contains the basic features including user login/logout and a contact page.
-It includes all commonly used configurations that would allow you to focus on adding new
-features to your application.
+[![Latest Stable Version](http://img.shields.io/packagist/v/endroid/qr-code.svg)](https://packagist.org/packages/endroid/qr-code)
+[![Build Status](http://img.shields.io/travis/endroid/qr-code.svg)](http://travis-ci.org/endroid/qr-code)
+[![Total Downloads](http://img.shields.io/packagist/dt/endroid/qr-code.svg)](https://packagist.org/packages/endroid/qr-code)
+[![Monthly Downloads](http://img.shields.io/packagist/dm/endroid/qr-code.svg)](https://packagist.org/packages/endroid/qr-code)
+[![License](http://img.shields.io/packagist/l/endroid/qr-code.svg)](https://packagist.org/packages/endroid/qr-code)
 
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-basic/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-basic)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-basic/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-basic)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-basic.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-basic)
+This library helps you generate QR codes in a jiffy. Makes use of [bacon/bacon-qr-code](https://github.com/Bacon/BaconQrCode)
+to generate the matrix and [khanamiryan/qrcode-detector-decoder](https://github.com/khanamiryan/php-qrcode-detector-decoder)
+for validating generated QR codes. Further extended with Twig extensions, generation routes, a factory and a
+Symfony bundle for easy installation and configuration.
 
-DIRECTORY STRUCTURE
--------------------
+## Installation
 
-      assets/             contains assets definition
-      commands/           contains console commands (controllers)
-      config/             contains application configurations
-      controllers/        contains Web controller classes
-      mail/               contains view files for e-mails
-      models/             contains model classes
-      runtime/            contains files generated during runtime
-      tests/              contains various tests for the basic application
-      vendor/             contains dependent 3rd-party packages
-      views/              contains view files for the Web application
-      web/                contains the entry script and Web resources
+Use [Composer](https://getcomposer.org/) to install the library.
 
+``` bash
+$ composer require endroid/qr-code
+```
 
-
-REQUIREMENTS
-------------
-
-The minimum requirement by this project template that your Web server supports PHP 5.4.0.
-
-
-INSTALLATION
-------------
-
-### Install via Composer
-
-If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
-at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
-
-You can then install this project template using the following command:
-
-~~~
-php composer.phar global require "fxp/composer-asset-plugin:^1.3.1"
-php composer.phar create-project --prefer-dist --stability=dev yiisoft/yii2-app-basic basic
-~~~
-
-Now you should be able to access the application through the following URL, assuming `basic` is the directory
-directly under the Web root.
-
-~~~
-http://localhost/basic/web/
-~~~
-
-
-### Install from an Archive File
-
-Extract the archive file downloaded from [yiiframework.com](http://www.yiiframework.com/download/) to
-a directory named `basic` that is directly under the Web root.
-
-Set cookie validation key in `config/web.php` file to some random secret string:
+## Basic usage
 
 ```php
-'request' => [
-    // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-    'cookieValidationKey' => '<secret random string goes here>',
-],
+use Endroid\QrCode\QrCode;
+
+$qrCode = new QrCode('Life is too short to be generating QR codes');
+
+header('Content-Type: '.$qrCode->getContentType());
+echo $qrCode->writeString();
 ```
 
-You can then access the application through the following URL:
-
-~~~
-http://localhost/basic/web/
-~~~
-
-
-CONFIGURATION
--------------
-
-### Database
-
-Edit the file `config/db.php` with real data, for example:
+## Advanced usage
 
 ```php
-return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '1234',
-    'charset' => 'utf8',
-];
+use Endroid\QrCode\ErrorCorrectionLevel;
+use Endroid\QrCode\LabelAlignment;
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\Response\QrCodeResponse;
+
+// Create a basic QR code
+$qrCode = new QrCode('Life is too short to be generating QR codes');
+$qrCode->setSize(300);
+
+// Set advanced options
+$qrCode->setWriterByName('png');
+$qrCode->setMargin(10);
+$qrCode->setEncoding('UTF-8');
+$qrCode->setErrorCorrectionLevel(new ErrorCorrectionLevel(ErrorCorrectionLevel::HIGH));
+$qrCode->setForegroundColor(['r' => 0, 'g' => 0, 'b' => 0, 'a' => 0]);
+$qrCode->setBackgroundColor(['r' => 255, 'g' => 255, 'b' => 255, 'a' => 0]);
+$qrCode->setLabel('Scan the code', 16, __DIR__.'/../assets/fonts/noto_sans.otf', LabelAlignment::CENTER);
+$qrCode->setLogoPath(__DIR__.'/../assets/images/symfony.png');
+$qrCode->setLogoSize(150, 200);
+$qrCode->setRoundBlockSize(true);
+$qrCode->setValidateResult(false);
+$qrCode->setWriterOptions(['exclude_xml_declaration' => true]);
+
+// Directly output the QR code
+header('Content-Type: '.$qrCode->getContentType());
+echo $qrCode->writeString();
+
+// Save it to a file
+$qrCode->writeFile(__DIR__.'/qrcode.png');
+
+// Create a response object
+$response = new QrCodeResponse($qrCode);
 ```
 
-**NOTES:**
-- Yii won't create the database for you, this has to be done manually before you can access it.
-- Check and edit the other files in the `config/` directory to customize your application as required.
-- Refer to the README in the `tests` directory for information specific to basic application tests.
+![QR Code](https://endroid.nl/qr-code/Life%20is%20too%20short%20to%20be%20generating%20QR%20codes.png)
 
+## Built-in validation reader
 
+You can enable the built-in validation reader (disabled by default) by calling
+setValidateResult(true). This validation reader does not guarantee that the QR
+code will be readable by all readers but it helps you provide a minimum level
+of quality.
+ 
+The readability of a QR code is primarily determined by the size, the input
+length, the error correction level and any possible logo over the image so you
+can tweak these parameters if you are looking for optimal results. You can also
+check $qrCode->getRoundBlockSize() value to see if block dimensions are rounded
+so that the image is more sharp and readable.
 
-TESTING
--------
+Take note that the validator can consume quite amount of additional resources.
 
-Tests are located in `tests` directory. They are developed with [Codeception PHP Testing Framework](http://codeception.com/).
-By default there are 3 test suites:
+## Symfony integration
 
-- `unit`
-- `functional`
-- `acceptance`
+The [endroid/qr-code-bundle](https://github.com/endroid/qr-code-bundle)
+integrates the QR code library in Symfony for an even better experience.
 
-Tests can be executed by running
+* Configure your defaults (like image size, default writer etc.)
+* Generate QR codes quickly from anywhere via the factory service
+* Generate QR codes directly by typing an URL like /qr-code/\<text>.png?size=300
+* Generate QR codes or URLs directly from Twig using dedicated functions
+ 
+Read the [bundle documentation](https://github.com/endroid/qr-code-bundle)
+for more information.
 
-```
-vendor/bin/codecept run
-``` 
+## Versioning
 
-The command above will execute unit and functional tests. Unit tests are testing the system components, while functional
-tests are for testing user interaction. Acceptance tests are disabled by default as they require additional setup since
-they perform testing in real browser. 
+Version numbers follow the MAJOR.MINOR.PATCH scheme. Backwards compatibility
+breaking changes will be kept to a minimum but be aware that these can occur.
+Lock your dependencies for production and test your code when upgrading.
 
+## License
 
-### Running  acceptance tests
-
-To execute acceptance tests do the following:  
-
-1. Rename `tests/acceptance.suite.yml.example` to `tests/acceptance.suite.yml` to enable suite configuration
-
-2. Replace `codeception/base` package in `composer.json` with `codeception/codeception` to install full featured
-   version of Codeception
-
-3. Update dependencies with Composer 
-
-    ```
-    composer update  
-    ```
-
-4. Download [Selenium Server](http://www.seleniumhq.org/download/) and launch it:
-
-    ```
-    java -jar ~/selenium-server-standalone-x.xx.x.jar
-    ```
-
-    In case of using Selenium Server 3.0 with Firefox browser since v48 or Google Chrome since v53 you must download [GeckoDriver](https://github.com/mozilla/geckodriver/releases) or [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) and launch Selenium with it:
-
-    ```
-    # for Firefox
-    java -jar -Dwebdriver.gecko.driver=~/geckodriver ~/selenium-server-standalone-3.xx.x.jar
-    
-    # for Google Chrome
-    java -jar -Dwebdriver.chrome.driver=~/chromedriver ~/selenium-server-standalone-3.xx.x.jar
-    ``` 
-    
-    As an alternative way you can use already configured Docker container with older versions of Selenium and Firefox:
-    
-    ```
-    docker run --net=host selenium/standalone-firefox:2.53.0
-    ```
-
-5. (Optional) Create `yii2_basic_tests` database and update it by applying migrations if you have them.
-
-   ```
-   tests/bin/yii migrate
-   ```
-
-   The database configuration can be found at `config/test_db.php`.
-
-
-6. Start web server:
-
-    ```
-    tests/bin/yii serve
-    ```
-
-7. Now you can run all available tests
-
-   ```
-   # run all available tests
-   vendor/bin/codecept run
-
-   # run acceptance tests
-   vendor/bin/codecept run acceptance
-
-   # run only unit and functional tests
-   vendor/bin/codecept run unit,functional
-   ```
-
-### Code coverage support
-
-By default, code coverage is disabled in `codeception.yml` configuration file, you should uncomment needed rows to be able
-to collect code coverage. You can run your tests and collect coverage with the following command:
-
-```
-#collect coverage for all tests
-vendor/bin/codecept run -- --coverage-html --coverage-xml
-
-#collect coverage only for unit tests
-vendor/bin/codecept run unit -- --coverage-html --coverage-xml
-
-#collect coverage for unit and functional tests
-vendor/bin/codecept run functional,unit -- --coverage-html --coverage-xml
-```
-
-You can see code coverage output under the `tests/_output` directory.
+This bundle is under the MIT license. For the full copyright and license
+information please view the LICENSE file that was distributed with this source code.

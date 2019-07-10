@@ -10,28 +10,24 @@ use kartik\mpdf\Pdf;
 
 class BarcodeController extends Controller
 {
-    public function actionIndex($asset_detail_id)
+    public function actionIndex(array $asset_detail_id)
     {
-
-
-        $model = AssetDetail::findOne($asset_detail_id);
         $content = $this->renderPartial('index', [
-            'model' => $model
+            'model' => $asset_detail_id,
         ]);
 
-        // setup kartik\mpdf\Pdf component
         $pdf = new Pdf([
             // set to use core fonts only
             'mode' => Pdf::MODE_UTF8,
             // A4 paper format
-            'format' => [30, 30],//กำหนดขนาด
-            'marginLeft' => false,
-            'marginRight' => false,
-            'marginTop' => 3,
+            //'format' => Pdf::FORMAT_A4,
+            'format' => [25, 20],//Pdf::FORMAT_A4,
+            'marginLeft' => 1,
+            'marginRight' => 1,
+            'marginTop' => 1,
             'marginBottom' => false,
             'marginHeader' => false,
             'marginFooter' => false,
-
             // portrait orientation
             'orientation' => Pdf::ORIENT_PORTRAIT,
             // stream to browser inline
@@ -40,11 +36,11 @@ class BarcodeController extends Controller
             'content' => $content,
             // format content from your own css file if needed or use the
             // enhanced bootstrap css built by Krajee for mPDF formatting
-            'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.css',
+            // 'cssFile' => '@frontend/web/css/kv-mpdf-bootstrap.css',
             // any css to be embedded if required
             'cssInline' => 'body{font-size:11px}',
             // set mPDF properties on the fly
-            'options' => ['title' => 'Print Sticker', ],
+            'options' => ['title' => 'Sticker'],
             // call mPDF methods on the fly
             'methods' => [
                 'SetHeader'=>false,
@@ -53,11 +49,6 @@ class BarcodeController extends Controller
         ]);
 
         // return the pdf output as per the destination setting
-
         return $pdf->render();
     }
-
-
-
-
 }

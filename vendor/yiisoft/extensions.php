@@ -212,15 +212,6 @@ return array (
       '@yii/httpclient' => $vendorDir . '/yiisoft/yii2-httpclient/src',
     ),
   ),
-  'yiisoft/yii2-authclient' => 
-  array (
-    'name' => 'yiisoft/yii2-authclient',
-    'version' => '2.2.3.0',
-    'alias' => 
-    array (
-      '@yii/authclient' => $vendorDir . '/yiisoft/yii2-authclient/src',
-    ),
-  ),
   'dektrium/yii2-user' => 
   array (
     'name' => 'dektrium/yii2-user',
@@ -581,6 +572,24 @@ return array (
     'alias' => 
     array (
       '@dmstr' => $vendorDir . '/dmstr/yii2-adminlte-asset',
+    ),
+  ),
+  'yiisoft/yii2-authclient' => 
+  array (
+    'name' => 'yiisoft/yii2-authclient',
+    'version' => '2.2.4.0',
+    'alias' => 
+    array (
+      '@yii/authclient' => $vendorDir . '/yiisoft/yii2-authclient/src',
+    ),
+  ),
+  '2amigos/qrcode-library' => 
+  array (
+    'name' => '2amigos/qrcode-library',
+    'version' => '1.1.2.0',
+    'alias' => 
+    array (
+      '@Da/QrCode' => $vendorDir . '/2amigos/qrcode-library/src',
     ),
   ),
 );

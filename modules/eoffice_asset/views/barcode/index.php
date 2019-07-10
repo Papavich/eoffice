@@ -1,5 +1,7 @@
-
-
+<?php
+use app\modules\eoffice_asset\models\Asset;
+use app\modules\eoffice_asset\models\AssetDetail;
+?>
 
 <div class="text-center">
 
@@ -8,8 +10,5 @@
 
 
 </div>
-
-
-
 
 

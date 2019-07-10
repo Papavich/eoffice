@@ -13,7 +13,8 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=4.3.10",
-        "ext-mbstring": "*"
+        "ext-mbstring": "*",
+        "2amigos/qrcode-library": "~1.1"
     },
     "autoload": {
         "classmap": ["mpdf.php", "classes"]
