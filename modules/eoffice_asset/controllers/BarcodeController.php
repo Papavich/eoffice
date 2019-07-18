@@ -5,15 +5,18 @@ namespace app\modules\eoffice_asset\controllers;
 use app\modules\eoffice_asset\models\Asset;
 use app\modules\eoffice_asset\models\AssetDetail;
 
+use yii\helpers\Html;
+use yii\helpers\Url;
+
 use yii\web\Controller;
 use kartik\mpdf\Pdf;
 
 class BarcodeController extends Controller
 {
-    public function actionIndex($asset_detail_id)
+    public function actionIndex()
     {
         $content = $this->renderPartial('index', [
-            'model' => $asset_detail_id,
+        //    'model' => $asset_detail_id,
         ]);
 
         $pdf = new Pdf([

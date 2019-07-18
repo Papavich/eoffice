@@ -14,7 +14,8 @@
     "require": {
         "php": ">=4.3.10",
         "ext-mbstring": "*",
-        "2amigos/qrcode-library": "~1.1"
+        "2amigos/qrcode-library": "~1.1",
+        "chillerlan/php-qrcode": "^3.1"
     },
     "autoload": {
         "classmap": ["mpdf.php", "classes"]

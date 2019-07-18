@@ -1,6 +1,6 @@
 <?php 
 
-use Da\QrCode\QrCode;
+
 
 $qrCode = (new QrCode('http://localhost/eoffice/web/eoffice_asset/asset-detail/view?id=201'))
     ->setSize(250)
