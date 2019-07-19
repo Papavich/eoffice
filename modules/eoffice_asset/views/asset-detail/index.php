@@ -97,6 +97,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     // 'asset_detail_building',
                     // 'asset_detail_room',
                     // 'asset_asset_id',
+                    //'asset_detail_image',
 
                     ['class' => 'yii\grid\ActionColumn',
                     'buttonOptions'=>['class'=>'btn btn-default'],
