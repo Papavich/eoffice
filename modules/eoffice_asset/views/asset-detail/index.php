@@ -80,6 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                // 'name1' => $name1,
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
+                    
 
                     //'asset_detail_id',
                    // 'asset_univ_code_start',
@@ -97,7 +98,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     // 'asset_detail_room',
                     // 'asset_asset_id',
 
-                    ['class' => 'yii\grid\ActionColumn'],
+                    ['class' => 'yii\grid\ActionColumn',
+                    'buttonOptions'=>['class'=>'btn btn-default'],
+                    'template'=>'{view} {update} {delete}',
+                ],
+                    
                 ],
             ]); ?>
 

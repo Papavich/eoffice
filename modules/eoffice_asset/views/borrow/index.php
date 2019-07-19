@@ -79,10 +79,13 @@ $this->params['breadcrumbs'][] = $this->title;
                             'borrow_date',
                             //'borrow_object',
 
-                            ['class' => 'yii\grid\ActionColumn'],
-
-                        ],
-                    ]); ?>
+                            ['class' => 'yii\grid\ActionColumn',
+                    'buttonOptions'=>['class'=>'btn btn-default'],
+                    'template'=>'{view} {update} {delete}',
+                ],
+                    
+                ],
+            ]); ?>
 
                 </div>
 
